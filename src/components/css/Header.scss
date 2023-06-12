@@ -1,0 +1,17 @@
+header {
+    padding: 3vh 0;
+
+    img {
+        height: 50px;
+    }
+
+    a {
+        color: var(--theme-color);
+        text-decoration: none;
+        margin-left: 5vw;
+    }
+
+    a.active {
+        text-decoration: underline;
+    }
+}

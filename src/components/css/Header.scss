@@ -1,5 +1,6 @@
 header {
     padding: 3vh 0;
+    margin: var(--content-margin);
 
     img {
         height: 50px;
@@ -8,7 +9,7 @@ header {
     a {
         color: var(--theme-color);
         text-decoration: none;
-        margin-left: 5vw;
+        margin-left: 50px;
     }
 
     a.active {

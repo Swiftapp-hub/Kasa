@@ -1,9 +1,11 @@
 import './css/Home.scss';
+import dBanner from '../assets/desktop-banner.webp';
+import mBanner from '../assets/mobile-banner.webp';
 
 function Home() {
     return (
-        <div className="Home">
-            Home
+        <div className="home">
+            {/*<img width={dBanner.width} height={dBanner.height} src={dBanner} srcSet={} alt=""/>*/}
         </div>
     );
 }

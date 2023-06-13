@@ -1,8 +1,9 @@
-import './css/404.scss';
+import './css/Error404.scss';
 
 function Error404() {
     return (
         <div className="error404">
+            404
         </div>
     )
 }

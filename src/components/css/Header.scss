@@ -4,6 +4,7 @@ header {
 
     img {
         height: 50px;
+        width: min-content;
     }
 
     a {
@@ -14,5 +15,15 @@ header {
 
     a.active {
         text-decoration: underline;
+    }
+
+    @media all and (max-width: 991px) {
+        img {
+            height: 35px;
+        }
+
+        a {
+            margin-left: 20px;
+        }
     }
 }

@@ -28,11 +28,11 @@ function Home() {
                 <h1 className="font-main-title flex justify-center align-center">Chez vous, partout et ailleurs</h1>
             </div>
 
-            <div className="home-grid">
+            <section className="home-grid">
                 {jsonData.map((item) => (
                     <GalleryCard key={item.id} item={item} />
                 ))}
-            </div>
+            </section>
         </div>
     );
 }

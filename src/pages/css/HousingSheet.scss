@@ -1,0 +1,19 @@
+.housing-sheet {
+    margin: var(--content-margin);
+
+    > div {
+        margin: 20px 0;
+
+        span {
+            color: var(--theme-color);
+        }
+    }
+
+    div.title {
+        h1 {
+            color: var(--theme-color);
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+    }
+}

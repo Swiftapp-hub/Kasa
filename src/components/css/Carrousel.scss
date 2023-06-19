@@ -1,0 +1,59 @@
+.carrousel {
+    width: 100%;
+    height: 32vw;
+    flex-wrap: nowrap;
+    position: relative;
+    border-radius: var(--main-radius);
+    overflow: hidden;
+
+    img.slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    img.visible {
+        transform: translateX(0%);
+    }
+
+    img.passed {
+        transform: translateX(-100%);
+    }
+
+    button {
+        position: absolute;
+        top: 42%;
+        bottom: 42%;
+        left: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        img {
+            height: 100%;
+            width: auto;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    button.second {
+        left: unset;
+        right: 0;
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    .count {
+        position: absolute;
+        bottom: 3%;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+}

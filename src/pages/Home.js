@@ -1,8 +1,7 @@
 import './css/Home.scss';
-import dBanner from '../assets/desktop-banner.webp';
-import mBanner from '../assets/mobile-banner.webp';
 import {useEffect, useState} from "react";
 import GalleryCard from "../components/GalleryCard";
+import Banner from "../components/Banner";
 
 function Home() {
     const [jsonData, setJsonData] = useState([]);
@@ -23,10 +22,7 @@ function Home() {
 
     return (
         <div className="home">
-            <div className="home-banner">
-                <img width={dBanner.width} height={dBanner.height} src={dBanner} srcSet={`${mBanner} 991w, ${dBanner} 1920w`} alt="" />
-                <h1 className="font-main-title flex justify-center align-center">Chez vous, partout et ailleurs</h1>
-            </div>
+            <Banner text="Chez vous, partout et ailleurs" />
 
             <section className="home-grid">
                 {jsonData.map((item) => (

@@ -27,7 +27,7 @@
         position: absolute;
         top: 42%;
         bottom: 42%;
-        left: 0;
+        left: 20px;
         background: none;
         border: none;
         cursor: pointer;
@@ -42,7 +42,7 @@
 
     button.second {
         left: unset;
-        right: 0;
+        right: 20px;
 
         img {
             transform: rotate(180deg);
@@ -55,5 +55,11 @@
         right: 0;
         left: 0;
         text-align: center;
+    }
+}
+
+@media all and (max-width: 991px) {
+    .carrousel {
+        height: 70vw;
     }
 }

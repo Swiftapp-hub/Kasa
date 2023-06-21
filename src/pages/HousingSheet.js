@@ -2,10 +2,14 @@ import './css/HousingSheet.scss';
 import Carrousel from "../components/Carrousel";
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import Error404 from "./Error404";
+import star from "../assets/star.svg";
+import starRed from "../assets/star-red.svg";
 
 function HousingSheet() {
     const [jsonData, setJsonData] = useState([]);
-    const { pageId } = useParams();
+    const [isExist, setIsExist] = useState(true);
+    const {pageId} = useParams();
 
     useEffect(() => {
         async function fetchData() {
@@ -13,38 +17,64 @@ function HousingSheet() {
                 const res = await fetch('http://localhost:3000/apidata/data.json');
                 const data = await res.json();
 
+                if (!data.some(e => e.id === pageId)) setIsExist(false);
+
                 data.forEach(e => {
                     if (e.id === pageId) {
                         setJsonData(e);
                     }
                 })
-            }
-            catch (err) {
+            } catch (err) {
                 console.log(err);
             }
         }
+
         fetchData();
-    }, []);
+    }, [pageId]);
+
+    if (isExist === false) {
+        return (
+            <Error404/>
+        )
+    }
 
     return (
         <div>
             {
                 jsonData.title ? (
                     <div className='housing-sheet'>
-                        <Carrousel itemImages={jsonData.pictures} />
+                        <Carrousel itemImages={jsonData.pictures}/>
 
-                        <div className="flex row space-between align-center">
-                            <div className="title">
-                                <h1>{jsonData.title}</h1>
-                                <span>{jsonData.location}</span>
+                        <div className="head-sheet flex row space-between">
+                            <div className="titles flex column space-between">
+                                <div className="flex column">
+                                    <h1 className="font-title">{jsonData.title}</h1>
+                                    <span className="font-normal">{jsonData.location}</span>
+                                </div>
+
+                                <div className="tags flex row">
+                                    {jsonData.tags.map((tag, index) => (
+                                        <span className="font-small" key={index}>{tag}</span>
+                                    ))}
+                                </div>
                             </div>
 
-                            <div className="profil flex align-center">
-                                <div className="flex column">
-                                    <span className="font-normal">{jsonData.host.name.split(' ')[0]}</span>
-                                    <span className="font-normal">{jsonData.host.name.split(' ')[1]}</span>
+                            <div className="profil flex column align-end space-between">
+                                <div className="info flex row align-center">
+                                    <div className="flex column align-end">
+                                        <span className="font-normal">{jsonData.host.name.split(' ')[0]}</span>
+                                        <span className="font-normal">{jsonData.host.name.split(' ')[1]}</span>
+                                    </div>
+                                    <img src={jsonData.host.picture} alt={jsonData.host.name}/>
                                 </div>
-                                <img src={jsonData.host.picture} alt={jsonData.host.name} />
+
+                                <div className="rating flex row">
+                                    <img src={jsonData.rating >= 1 ? starRed : star} alt=""/>
+                                    <img src={jsonData.rating >= 2 ? starRed : star} alt=""/>
+                                    <img src={jsonData.rating >= 3 ? starRed : star} alt=""/>
+                                    <img src={jsonData.rating >= 4 ? starRed : star} alt=""/>
+                                    <img src={jsonData.rating >= 5 ? starRed : star} alt=""/>
+                                </div>
                             </div>
                         </div>
                     </div>

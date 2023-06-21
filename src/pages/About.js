@@ -1,9 +1,10 @@
 import './css/About.scss';
+import Banner from "../components/Banner";
 
 function About() {
     return (
         <div className="about">
-            About
+            <Banner text=""/>
         </div>
     );
 }

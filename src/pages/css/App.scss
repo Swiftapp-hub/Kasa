@@ -24,6 +24,10 @@ h1, h2, h3, h4, p, a, span {
     align-items: center;
 }
 
+.flex.align-end {
+    align-items: end;
+}
+
 .flex.justify-center {
     justify-content: center;
 }
@@ -77,11 +81,19 @@ body {
         font-size: 24px;
     }
 
+    .font-title {
+        font-size: 20px;
+    }
+
     .font-medium {
         font-size: 18px;
     }
 
     .font-normal {
         font-size: 16px;
+    }
+
+    .font-small {
+        font-size: 10px;
     }
 }

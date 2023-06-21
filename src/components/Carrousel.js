@@ -22,13 +22,22 @@ function Carrousel({itemImages}) {
                 <img className={showOrHide(index, imgVisible)} key={item} src={item} alt=""/>
             ))}
 
-            <button onClick={() => imgVisible === 0 ? setImgVisible(itemImagesLength - 1) : setImgVisible(imgVisible - 1)}>
-                <img src={arrow} alt="Previous"/>
-            </button>
-            <button  className="second"
-                     onClick={() => imgVisible + 1 === itemImagesLength ? setImgVisible(0) : setImgVisible(imgVisible + 1)}>
-                <img src={arrow} alt="Next"/>
-            </button>
+            {
+                itemImagesLength > 1 && (
+                    <button onClick={() => imgVisible === 0 ? setImgVisible(itemImagesLength - 1) : setImgVisible(imgVisible - 1)}>
+                        <img src={arrow} alt="Previous"/>
+                    </button>
+                )
+            }
+
+            {
+                itemImagesLength > 1 && (
+                    <button  className="second"
+                             onClick={() => imgVisible + 1 === itemImagesLength ? setImgVisible(0) : setImgVisible(imgVisible + 1)}>
+                        <img src={arrow} alt="Next"/>
+                    </button>
+                )
+            }
 
             <span className="count font-normal">
                 {imgVisible + 1} / {itemImagesLength}

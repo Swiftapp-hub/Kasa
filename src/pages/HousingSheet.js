@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import Error404 from "./Error404";
 import star from "../assets/star.svg";
 import starRed from "../assets/star-red.svg";
+import Collapse from "../components/Collapse";
 
 function HousingSheet() {
     const [jsonData, setJsonData] = useState([]);
@@ -76,6 +77,11 @@ function HousingSheet() {
                                     <img src={jsonData.rating >= 5 ? starRed : star} alt=""/>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="description">
+                            <Collapse title="Description" description={jsonData.description}/>
+                            <Collapse title="Équipements" description={jsonData.equipments.join('\n')}/>
                         </div>
                     </div>
                 ) : null

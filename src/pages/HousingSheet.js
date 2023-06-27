@@ -33,7 +33,7 @@ function HousingSheet() {
         fetchData();
     }, [pageId]);
 
-    if (isExist === false) {
+    if (!isExist) {
         return (
             <Error404/>
         )

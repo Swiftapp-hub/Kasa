@@ -2,6 +2,8 @@ import './css/About.scss';
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import {useEffect, useState} from "react";
+import dAboutBanner from "../assets/desktop-about-banner.webp";
+import mAboutBanner from "../assets/mobile-about-banner.webp";
 
 function About() {
     const [jsonData, setJsonData] = useState([]);
@@ -23,10 +25,10 @@ function About() {
 
     return (
         <div className="about flex column">
-            <Banner text=""/>
+            <Banner text="" dimage={dAboutBanner} mimage={mAboutBanner}/>
 
             {jsonData.map((item, index) => (
-                <Collapse key={index} title={item.name} description={item.content} isExpend={index === 0}/>
+                <Collapse key={index} title={item.name} description={item.content} isExpand={index === 0}/>
             ))}
         </div>
     );

@@ -28,7 +28,7 @@ function About() {
             <Banner text="" dimage={dAboutBanner} mimage={mAboutBanner}/>
 
             {jsonData.map((item, index) => (
-                <Collapse key={index} title={item.name} description={item.content} isExpand={index === 0}/>
+                <Collapse key={index} title={item.name} description={item.content} isExpand={false}/>
             ))}
         </div>
     );

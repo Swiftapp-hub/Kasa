@@ -11,7 +11,7 @@ function About() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await fetch('http://localhost:3000/apidata/aboutdata.json');
+                const res = await fetch('/apidata/aboutdata.json');
                 const data = await res.json();
 
                 setJsonData(data);

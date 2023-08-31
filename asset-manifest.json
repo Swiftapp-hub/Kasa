@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.5023d48c.css",
-    "main.js": "/static/js/main.7202211f.js",
-    "static/media/desktop-about-banner.webp": "/static/media/desktop-about-banner.30591089f24b46a987bf.webp",
-    "static/media/desktop-banner.webp": "/static/media/desktop-banner.7f3e6fde2d31ba05019b.webp",
-    "static/media/mobile-about-banner.webp": "/static/media/mobile-about-banner.480afd2fe95497ad2788.webp",
-    "static/media/mobile-banner.webp": "/static/media/mobile-banner.99133c712cc50afcdc5d.webp",
-    "static/media/logo.webp": "/static/media/logo.3395f32096ee0a66bbf4.webp",
-    "static/media/logo-footer.webp": "/static/media/logo-footer.7bc5f83f5a4b5ab11b0f.webp",
-    "index.html": "/index.html",
-    "static/media/star-red.svg": "/static/media/star-red.30b8963e66a47777ef47296f505567be.svg",
-    "static/media/star.svg": "/static/media/star.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
-    "static/media/arrow-collapse-top.svg": "/static/media/arrow-collapse-top.788b523a93cc707df0c2e312a002ebdb.svg",
-    "main.5023d48c.css.map": "/static/css/main.5023d48c.css.map",
-    "main.7202211f.js.map": "/static/js/main.7202211f.js.map"
+    "main.css": "/Swiftapp-hub/Kasa/static/css/main.5023d48c.css",
+    "main.js": "/Swiftapp-hub/Kasa/static/js/main.2ce3527b.js",
+    "static/media/desktop-about-banner.webp": "/Swiftapp-hub/Kasa/static/media/desktop-about-banner.30591089f24b46a987bf.webp",
+    "static/media/desktop-banner.webp": "/Swiftapp-hub/Kasa/static/media/desktop-banner.7f3e6fde2d31ba05019b.webp",
+    "static/media/mobile-about-banner.webp": "/Swiftapp-hub/Kasa/static/media/mobile-about-banner.480afd2fe95497ad2788.webp",
+    "static/media/mobile-banner.webp": "/Swiftapp-hub/Kasa/static/media/mobile-banner.99133c712cc50afcdc5d.webp",
+    "static/media/logo.webp": "/Swiftapp-hub/Kasa/static/media/logo.3395f32096ee0a66bbf4.webp",
+    "static/media/logo-footer.webp": "/Swiftapp-hub/Kasa/static/media/logo-footer.7bc5f83f5a4b5ab11b0f.webp",
+    "index.html": "/Swiftapp-hub/Kasa/index.html",
+    "static/media/star-red.svg": "/Swiftapp-hub/Kasa/static/media/star-red.30b8963e66a47777ef47296f505567be.svg",
+    "static/media/star.svg": "/Swiftapp-hub/Kasa/static/media/star.68fd8a1ead5375bd59bb6ae0b633ffd3.svg",
+    "static/media/arrow-collapse-top.svg": "/Swiftapp-hub/Kasa/static/media/arrow-collapse-top.788b523a93cc707df0c2e312a002ebdb.svg",
+    "main.5023d48c.css.map": "/Swiftapp-hub/Kasa/static/css/main.5023d48c.css.map",
+    "main.2ce3527b.js.map": "/Swiftapp-hub/Kasa/static/js/main.2ce3527b.js.map"
   },
   "entrypoints": [
     "static/css/main.5023d48c.css",
-    "static/js/main.7202211f.js"
+    "static/js/main.2ce3527b.js"
   ]
 }

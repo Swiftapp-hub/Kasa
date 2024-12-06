@@ -1,14 +1,14 @@
-import './css/Carrousel.scss';
+import "./css/Carrousel.scss";
 import {useEffect, useState} from "react";
-import arrow from '../assets/arrow.png';
+import arrow from "../assets/arrow.png";
 
 function showOrHide(index, imgVisible) {
     if (index === imgVisible) {
-        return 'slide visible';
+        return "slide visible";
     } else if (index < imgVisible) {
-        return 'slide passed';
+        return "slide passed";
     } else {
-        return 'slide';
+        return "slide";
     }
 }
 
@@ -22,39 +22,33 @@ function Carrousel({itemImages}) {
             else if (event.keyCode === 39) imgVisible + 1 === itemImagesLength ? setImgVisible(0) : setImgVisible(imgVisible + 1);
         };
 
-        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener("keydown", handleKeyDown);
 
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener("keydown", handleKeyDown);
         };
     }, [imgVisible, itemImagesLength]);
 
     return (
-        <section className='carrousel flex row'>
+        <section className="carrousel flex row">
             {itemImages.map((item, index) => (
                 <img className={showOrHide(index, imgVisible)} key={item} src={item} alt=""/>
             ))}
 
-            {
-                itemImagesLength > 1 && (
-                    <button onClick={() => imgVisible === 0 ? setImgVisible(itemImagesLength - 1) : setImgVisible(imgVisible - 1)}>
-                        <img src={arrow} alt="Previous"/>
-                    </button>
-                )
-            }
+            {itemImagesLength > 1 && (<>
+                <button onClick={() => imgVisible === 0 ? setImgVisible(itemImagesLength - 1) : setImgVisible(imgVisible - 1)}>
+                    <img src={arrow} alt="Previous"/>
+                </button>
 
-            {
-                itemImagesLength > 1 && (
-                    <button className="second"
-                            onClick={() => imgVisible + 1 === itemImagesLength ? setImgVisible(0) : setImgVisible(imgVisible + 1)}>
-                        <img src={arrow} alt="Next"/>
-                    </button>
-                )
-            }
+                <button className="second"
+                        onClick={() => imgVisible + 1 === itemImagesLength ? setImgVisible(0) : setImgVisible(imgVisible + 1)}>
+                    <img src={arrow} alt="Next"/>
+                </button>
 
-            <span className="count font-normal">
-                {imgVisible + 1} / {itemImagesLength}
-            </span>
+                <span className="count font-normal">
+                    {imgVisible + 1} / {itemImagesLength}
+                </span>
+            </>)}
         </section>
     );
 }
